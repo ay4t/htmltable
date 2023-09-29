@@ -12,6 +12,7 @@ use Ay4t\HtmlTable\MiniContainer\MiniContainerBase;
  * @property string[][] CellTagNames
  * @property string[][][] CellClasses
  * @property bool[][] OpenEndCells
+ * @property string[][][] CellAttributes
  *   Array marking those cells that are open-end.
  *   Format: $[$rowName][$colName] = true.
  * @property StaticAttributesMap RowAttributes
@@ -26,6 +27,7 @@ class BuildContainerBase extends MiniContainerBase {
       'CellContents' => [],
       'CellTagNames' => [],
       'CellClasses' => [],
+      'CellAttributes' => [],
       'OpenEndCells' => [],
       'RowAttributes' => new StaticAttributesMap(),
       'RowStripings' => [],
@@ -59,6 +61,15 @@ class BuildContainerBase extends MiniContainerBase {
    */
   protected function validate_CellClasses(array $cellClasses) {
     // No validation, always accept.
+  }
+
+  /**
+   * @param string[][][] $cellClasses
+   *
+   * @see BuildContainerBase::$CellAttributes
+   */
+  protected function validate_CellAttributes(array $cellAttributes) {
+  	// No validation, always accept.
   }
 
   /**

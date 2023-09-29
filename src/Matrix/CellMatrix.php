@@ -155,6 +155,20 @@ class CellMatrix {
       }
     }
   }
+  
+  /**
+   * @param string[][][] $cellAttributes
+   */
+  public function setCellAttributes(array $cellAttributes) {
+  	foreach ($cellAttributes as $iRow => $rowCellAttributes) {
+  		foreach ($rowCellAttributes as $iCol => $attributes) {
+  			foreach ($attributes as $key => $value) {
+  				$this->cells[$iRow][$iCol] = $this->cells[$iRow][$iCol]->setAttribute($key, $value);
+
+  			}
+  		}
+  	}
+  }
 
   /**
    * @return \Donquixote\Cellbrush\Cell\CellInterface[][]

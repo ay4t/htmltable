@@ -191,6 +191,23 @@ class BuildContainer extends BuildContainerBase {
         }
       }
     }
+    
+    $cellAttributesIndexed = [];
+    foreach ($this->CellAttributes as $rowName => $rowCellAttributes) {
+    	if ($this->rows->nameIsLeaf($rowName)) {
+    		$iRow = $this->rows->subtreeIndex($rowName);
+    		$rowCellAttributesIndexed = [];
+    		foreach ($rowCellAttributes as $colName => $attributes) {
+    			if ($this->columns->nameIsLeaf($colName)) {
+    				$iCol = $this->columns->subtreeIndex($colName);
+    				$rowCellAttributesIndexed[$iCol] = $attributes;
+    			}
+    		}
+    		$cellAttributesIndexed[$iRow] = $rowCellAttributesIndexed;
+    	}
+    }
+
+    $matrix->setCellAttributes($cellAttributesIndexed);
 
     return $matrix;
   }
