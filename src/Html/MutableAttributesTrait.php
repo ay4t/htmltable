@@ -18,6 +18,12 @@ trait MutableAttributesTrait {
     $this->attributes = new Attributes();
   }
 
+  public function addAttributes(string $key, $value) {
+    $this->attributes = $this->attributes->setAttribute($key, $value);
+    return $this;
+  }
+
+
   /**
    * @param string $class
    *
