@@ -1,0 +1,16 @@
+{
+  "name": "ay4t/htmltable",
+  "type": "library",
+  "description": "Library to generate HTML tables.",
+  "homepage": "http://github.com/donquixote/cellbrush",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ayatulloh Ahad R",
+      "email": "kawoel@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "Ay4t\\HtmlTable\\": "src/" }
+  }
+}
