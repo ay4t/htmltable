@@ -13,21 +13,21 @@ use Ay4t\HtmlTable\TSection\TableSectionStructureInterface;
 class TBodyWrapper implements TableSectionStructureInterface {
 
   /**
-   * @var \Donquixote\Cellbrush\TSection\TableSection
+   * @var \Ay4t\HtmlTable\TSection\TableSection
    */
   private $tbody;
 
   /**
    * The constructor.
    *
-   * @param \Donquixote\Cellbrush\TSection\TableSection $tbody
+   * @param \Ay4t\HtmlTable\TSection\TableSection $tbody
    */
   function __construct(TableSection $tbody) {
     $this->tbody = $tbody;
   }
 
   /**
-   * @return \Donquixote\Cellbrush\TSection\TableSection
+   * @return \Ay4t\HtmlTable\TSection\TableSection
    */
   function tbody() {
     return $this->tbody;
@@ -36,7 +36,7 @@ class TBodyWrapper implements TableSectionStructureInterface {
   /**
    * @param string $colName
    *
-   * @return \Donquixote\Cellbrush\Handle\SectionColHandle
+   * @return \Ay4t\HtmlTable\Handle\SectionColHandle
    */
   function colHandle($colName) {
     return $this->tbody->colHandle($colName);
@@ -78,7 +78,7 @@ class TBodyWrapper implements TableSectionStructureInterface {
   /**
    * @param string $rowName
    *
-   * @return \Donquixote\Cellbrush\Handle\RowHandle
+   * @return \Ay4t\HtmlTable\Handle\RowHandle
    * @throws \Exception
    */
   public function rowHandle($rowName) {
@@ -91,7 +91,7 @@ class TBodyWrapper implements TableSectionStructureInterface {
    *
    * @param $rowName
    *
-   * @return \Donquixote\Cellbrush\Handle\RowHandle
+   * @return \Ay4t\HtmlTable\Handle\RowHandle
    * @throws \Exception
    */
   public function addRow($rowName) {

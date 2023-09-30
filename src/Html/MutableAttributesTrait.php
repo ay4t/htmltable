@@ -9,8 +9,7 @@ trait MutableAttributesTrait {
 
   /**
    * Attribute values for all attributes except class.
-   *
-   * @var AttributesInterface
+   * @var Attributes
    */
   private $attributes;
 
@@ -45,6 +44,7 @@ trait MutableAttributesTrait {
    */
   function addClasses(array $classes) {
     $this->attributes = $this->attributes->addClasses($classes);
+    return $this;
   }
 
   /**
