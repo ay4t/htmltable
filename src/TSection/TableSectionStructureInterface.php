@@ -10,14 +10,14 @@ interface TableSectionStructureInterface extends TableRowsInterface {
   /**
    * @param string $colName
    *
-   * @return \Donquixote\Cellbrush\Handle\SectionColHandle
+   * @return \Ay4t\HtmlTable\Handle\SectionColHandle
    */
   function colHandle($colName);
 
   /**
    * @param string $rowName
    *
-   * @return \Donquixote\Cellbrush\Handle\RowHandle
+   * @return \Ay4t\HtmlTable\Handle\RowHandle
    * @throws \Exception
    */
   public function rowHandle($rowName);
@@ -28,7 +28,7 @@ interface TableSectionStructureInterface extends TableRowsInterface {
    *
    * @param $rowName
    *
-   * @return \Donquixote\Cellbrush\Handle\RowHandle
+   * @return \Ay4t\HtmlTable\Handle\RowHandle
    * @throws \Exception
    */
   public function addRow($rowName);

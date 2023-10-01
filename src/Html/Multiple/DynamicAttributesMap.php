@@ -37,8 +37,6 @@ class DynamicAttributesMap extends AttributesMapBase {
   /**
    * @param string[] $namesClasses
    *   Format: $[$name] = $class
-   *
-   * @return $this
    */
   public function namesAddClasses(array $namesClasses) {
     foreach ($namesClasses as $name => $class) {

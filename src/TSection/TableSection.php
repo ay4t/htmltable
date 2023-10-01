@@ -22,12 +22,12 @@ class TableSection implements TableSectionInterface {
   private $tagName;
 
   /**
-   * @var \Donquixote\Cellbrush\Axis\DynamicAxis
+   * @var \Ay4t\HtmlTable\Axis\DynamicAxis
    */
   private $rows;
 
   /**
-   * @var \Donquixote\Cellbrush\Html\Multiple\DynamicAttributesMap
+   * @var \Ay4t\HtmlTable\Html\Multiple\DynamicAttributesMap
    */
   private $rowAttributes;
 
@@ -45,7 +45,7 @@ class TableSection implements TableSectionInterface {
   private $colAttributes;
 
   /**
-   * @var \Donquixote\Cellbrush\Cell\CellInterface[][]
+   * @var \Ay4t\HtmlTable\Cell\CellInterface[][]
    *   Format: $[$rowName][$colName] = $content
    */
   private $cellContents = [];
@@ -134,7 +134,7 @@ class TableSection implements TableSectionInterface {
   /**
    * @param string $rowName
    *
-   * @return \Donquixote\Cellbrush\Handle\RowHandle
+   * @return \Ay4t\HtmlTable\Handle\RowHandle
    * @throws \Exception
    */
   public function rowHandle($rowName) {
@@ -282,6 +282,7 @@ class TableSection implements TableSectionInterface {
    */
   public function addCellClass($rowName, $colName, $class) {
     $this->cellClasses[$rowName][$colName][$class] = $class;
+    return $this;
   }
 
   /**
@@ -295,6 +296,7 @@ class TableSection implements TableSectionInterface {
   	$cellAttributes = isset($this->cellAttributes[$rowName][$colName])? $this->cellAttributes[$rowName][$colName]: [];  	
 
   	$this->cellAttributes[$rowName][$colName] = array_merge($cellAttributes, $attributes);
+    return $this;
   }
 
   /**

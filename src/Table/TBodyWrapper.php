@@ -177,7 +177,8 @@ class TBodyWrapper implements TableSectionStructureInterface {
    * @throws \Exception
    */
   function tdOpenEnd($rowName, $colName, $content) {
-    return $this->tbody->tdOpenEnd($rowName, $colName, $content);
+    $this->tbody->tdOpenEnd($rowName, $colName, $content);
+    return $this;
   }
 
   /**
@@ -194,7 +195,8 @@ class TBodyWrapper implements TableSectionStructureInterface {
    * @throws \Exception
    */
   function thOpenEnd($rowName, $colName, $content) {
-    return $this->tbody->thOpenEnd($rowName, $colName, $content);
+    $this->tbody->thOpenEnd($rowName, $colName, $content);
+    return $this;
   }
 
   /**

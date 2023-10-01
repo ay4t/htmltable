@@ -182,7 +182,7 @@ class BuildContainer extends BuildContainerBase {
       foreach ($rowCells as $colName => $cTrue) {
         $iCol = $this->columns->subtreeIndex($colName);
         $colRange = $this->columns->subtreeRange($colName);
-        /** @var \Donquixote\Cellbrush\Axis\RangeInterface $colRange */
+        /** @var \Ay4t\HtmlTable\Axis\RangeInterface $colRange */
         while ($colRange = $colRange->getNext()) {
           $iColSup = $colRange->iSup();
           if (!$matrix->cellGrowRight($iRow, $iCol, $iColSup)) {

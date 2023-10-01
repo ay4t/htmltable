@@ -74,8 +74,6 @@ class DynamicAxis {
 
   /**
    * @param string[] $names
-   *
-   * @return $this
    */
   function addNames(array $names) {
     foreach ($names as $name) {
@@ -162,7 +160,6 @@ class DynamicAxis {
    * @param string $groupName
    * @param string[] $nameSuffixes
    *
-   * @return $this
    * @throws \Exception
    */
   public function addGroup($groupName, $nameSuffixes) {

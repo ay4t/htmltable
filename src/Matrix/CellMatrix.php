@@ -50,7 +50,7 @@ class CellMatrix {
   /**
    * @param int $iRow
    * @param int $iCol
-   * @param \Donquixote\Cellbrush\Cell\CellInterface $cell
+   * @param \Ay4t\HtmlTable\Cell\CellInterface $cell
    */
   public function addCell($iRow, $iCol, CellInterface $cell) {
     if ($cell->hasRange()) {
@@ -171,7 +171,7 @@ class CellMatrix {
   }
 
   /**
-   * @return \Donquixote\Cellbrush\Cell\CellInterface[][]
+   * @return \Ay4t\HtmlTable\Cell\CellInterface[][]
    */
   public function getCells() {
     return $this->cells;

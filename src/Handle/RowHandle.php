@@ -100,6 +100,7 @@ class RowHandle {
    */
   public function thOpenEnd($colName, $content) {
     $this->tsection->thOpenEnd($this->rowName, $colName, $content);
+    return $this;
   }
 
 }
