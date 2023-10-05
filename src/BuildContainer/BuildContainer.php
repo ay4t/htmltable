@@ -194,7 +194,7 @@ class BuildContainer extends BuildContainerBase {
     
     $cellAttributesIndexed = [];
     foreach ($this->CellAttributes as $rowName => $rowCellAttributes) {
-    	if ($this->rows->nameIsLeaf($rowName)) {
+    	// if ($this->rows->nameIsLeaf($rowName)) { // remove this condition to allow row attributes to be applied to all rows and header rows
     		$iRow = $this->rows->subtreeIndex($rowName);
     		$rowCellAttributesIndexed = [];
     		foreach ($rowCellAttributes as $colName => $attributes) {
@@ -204,7 +204,7 @@ class BuildContainer extends BuildContainerBase {
     			}
     		}
     		$cellAttributesIndexed[$iRow] = $rowCellAttributesIndexed;
-    	}
+    	// }
     }
 
     $matrix->setCellAttributes($cellAttributesIndexed);
