@@ -198,10 +198,10 @@ class BuildContainer extends BuildContainerBase {
     		$iRow = $this->rows->subtreeIndex($rowName);
     		$rowCellAttributesIndexed = [];
     		foreach ($rowCellAttributes as $colName => $attributes) {
-    			if ($this->columns->nameIsLeaf($colName)) {
+    			// if ($this->columns->nameIsLeaf($colName)) {
     				$iCol = $this->columns->subtreeIndex($colName);
     				$rowCellAttributesIndexed[$iCol] = $attributes;
-    			}
+    			// }
     		}
     		$cellAttributesIndexed[$iRow] = $rowCellAttributesIndexed;
     	// }
